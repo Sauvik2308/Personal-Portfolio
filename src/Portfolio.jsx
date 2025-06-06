@@ -291,8 +291,14 @@ const Portfolio = () => {
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-teal-500 to-emerald-500"></div>
             {education.map((edu, index) => (
-              <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'} mb-12`}>
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
+              <div
+                key={index}
+                className={`relative flex flex-col md:flex-row items-center md:items-start ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+                  } mb-12`}
+              >
+
+                <div className={`w-full md:w-5/12 mt-6 md:mt-0 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
+
                   <div className={`${cardClasses} border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105`}>
                     <div className="flex items-center gap-2 mb-3 text-teal-600">
                       <Calendar className="w-4 h-4" />
