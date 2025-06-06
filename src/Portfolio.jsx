@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { 
-  Menu, 
-  X, 
-  Download, 
-  Mail, 
-  Github, 
-  Linkedin, 
+import {
+  Menu,
+  X,
+  Download,
+  Mail,
+  Github,
+  Linkedin,
   ExternalLink,
   Sun,
   Moon,
@@ -47,12 +47,12 @@ const Portfolio = () => {
     setIsMenuOpen(false);
   };
 
-  const themeClasses = isDarkMode 
-    ? 'bg-gray-900 text-white' 
+  const themeClasses = isDarkMode
+    ? 'bg-gray-900 text-white'
     : 'bg-gray-50 text-gray-900';
 
-  const cardClasses = isDarkMode 
-    ? 'bg-gray-800 border-gray-700' 
+  const cardClasses = isDarkMode
+    ? 'bg-gray-800 border-gray-700'
     : 'bg-white border-gray-200';
 
   const techStack = [
@@ -126,7 +126,7 @@ const Portfolio = () => {
 
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 backdrop-blur-md ${isDarkMode ? 'bg-gray-900/90' : 'bg-white/90'} border-b ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg flex items-center justify-center">
@@ -141,9 +141,8 @@ const Portfolio = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className={`capitalize hover:text-teal-600 transition-colors ${
-                    activeSection === item ? 'text-teal-600 font-semibold' : ''
-                  }`}
+                  className={`capitalize hover:text-teal-600 transition-colors ${activeSection === item ? 'text-teal-600 font-semibold' : ''
+                    }`}
                 >
                   {item.replace('-', ' ')}
                 </button>
@@ -193,6 +192,8 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section id="home" className="pt-20 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
+          {/* <div className="w-full px-4 lg:px-20"> */}
+
           <div className="text-center py-20 animate-fade-in">
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mb-6 transform hover:scale-105 transition-transform duration-300">
@@ -210,7 +211,7 @@ const Portfolio = () => {
                 <Download className="w-5 h-5" />
                 Download Resume
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="border-2 border-teal-500 text-teal-600 px-8 py-3 rounded-lg hover:bg-teal-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
@@ -234,12 +235,12 @@ const Portfolio = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-teal-600">Hello, I'm Sauvik!</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                  I'm a passionate software engineering student with a strong foundation in full-stack development. 
+                  I'm a passionate software engineering student with a strong foundation in full-stack development.
                   I love solving complex problems and turning ideas into reality through code.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  My journey in software development has equipped me with skills in modern web technologies, 
-                  database management, and cloud services. I'm always eager to learn new technologies and 
+                  My journey in software development has equipped me with skills in modern web technologies,
+                  database management, and cloud services. I'm always eager to learn new technologies and
                   contribute to meaningful projects.
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -379,7 +380,7 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      {/* <section id="contact" className="py-20 px-4">
+      <section id="contact" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-teal-600">Get In Touch</h2>
@@ -419,14 +420,31 @@ const Portfolio = () => {
             </div>
             <div className={`${cardClasses} border rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300`}>
               <h3 className="text-2xl font-bold mb-6 text-teal-600">Send a Message</h3>
-text-white py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+              <form className="space-y-4">
+                <div>
+                  <input type="text" placeholder="Your Name" className={`w-full p-3 rounded-lg border ${isDarkMode
+                    ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'} focus:border-teal-500 focus:outline-none
+        transition-colors`} />
+                </div>
+                <div>
+                  <input type="email" placeholder="Your Email" className={`w-full p-3 rounded-lg border ${isDarkMode
+                    ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'} focus:border-teal-500 focus:outline-none
+        transition-colors`} />
+                </div>
+                <div>
+                  <textarea rows="4" placeholder="Your Message" className={`w-full p-3 rounded-lg border ${isDarkMode
+                    ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'} focus:border-teal-500 focus:outline-none
+        transition-colors resize-none`}></textarea>
+                </div>
+                <button
+                  className="w-full bg-gradient-to-r from-teal-500 to-emerald-500 text-white py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                   Send Message
                 </button>
               </form>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Footer */}
       <footer className={`border-t ${isDarkMode ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white'} py-8`}>
