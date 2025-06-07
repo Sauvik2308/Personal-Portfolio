@@ -91,22 +91,22 @@ const Portfolio = () => {
       title: 'LearnTube - LMS',
       description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
       tech: ['React', 'Express', 'Stripe', 'MongoDB'],
-      github: '#',
-      live: '#'
+      github: '/under-maintenance',
+      live: '/under-maintenance'
     },
     {
       title: 'E-Commerce Platform',
       description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: '#',
-      live: '#'
+      github: '/under-maintenance',
+      live: '/under-maintenance'
     },
     {
       title: 'Sign Language Detection',
       description: 'Weather data visualization dashboard with interactive charts, location-based forecasts, and historical data analysis.',
       tech: ['Python', 'Tensorflow', 'Keras', 'NumPy'],
-      github: '#',
-      live: '#'
+      github: '/under-maintenance',
+      live: '/under-maintenance'
     }
   ];
 
