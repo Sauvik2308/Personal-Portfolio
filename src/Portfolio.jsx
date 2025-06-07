@@ -147,7 +147,7 @@ const Portfolio = () => {
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">
-                  <img src="../public/logo3.png" alt="" />
+                  <img src="/public/logo3.png" alt="" />
                 </span>
               </div>
               <span className="font-bold text-xl text-teal-600">Sauvik Das</span>
@@ -216,7 +216,7 @@ const Portfolio = () => {
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mb-6 transform hover:scale-105 transition-transform duration-300">
                 <span className="text-white font-bold text-4xl">
-                  <img className='rounded-full' src="../public/logo3.png" alt="Image" />
+                  <img className='rounded-full' src="/public/logo3.png" alt="Image" />
                 </span>
               </div>
             </div>
@@ -481,7 +481,7 @@ const Portfolio = () => {
           <div className="flex justify-center items-center space-x-3 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">
-                <img src="../public/logo3.png" alt="" />
+                <img src="/public/logo3.png" alt="" />
               </span>
             </div>
             <span className="font-bold text-lg text-teal-600">Sauvik Das</span>
