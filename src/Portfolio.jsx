@@ -18,6 +18,37 @@ import {
   Globe,
   Smartphone
 } from 'lucide-react';
+import { IoLogoJavascript} from "react-icons/io5";
+import { FaReact, FaPython, FaJava } from "react-icons/fa";
+import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiPostgresql } from "react-icons/si";
+import { FaNode, FaGitAlt } from "react-icons/fa6";
+import { BiLogoPostgresql } from "react-icons/bi";
+
+  const techStack = [
+    { name: 'JavaScript', icon: <IoLogoJavascript color='Yellow' />, category: 'Frontend' },
+
+    { name: 'React', icon: <FaReact color='Blue' />, category: 'Frontend' },
+
+    { name: 'TypeScript', icon: <SiTypescript color='Skyblue' />, category: 'Frontend' },
+
+    { name: 'Node.js', icon: <FaNode color='Green' />, category: 'Backend' },
+
+    { name: 'Java', icon: <FaJava color='Brown' />, category: 'Backend' },
+
+    { name: 'MongoDB', icon: <SiMongodb color='Green' />, category: 'Database' },
+
+    { name: 'PostgreSQL', icon: <BiLogoPostgresql color='darkblue' />, category: 'Database' },
+
+    { name: 'Git', icon: <FaGitAlt color='red' /> , category: 'Tools' },
+
+    { name: 'Postman', icon: <SiPostman color='#f1340b' />, category: 'Tools' },
+
+    { name: 'MySQL', icon: <SiMysql color='blue' />, category: 'Database' },
+
+    // { name: 'Firebase', icon: '🔥', category: 'Cloud' },
+
+    // { name: 'Next.js', icon: '▲', category: 'Frontend' }
+  ];
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,22 +86,14 @@ const Portfolio = () => {
     ? 'bg-gray-800 border-gray-700'
     : 'bg-white border-gray-200';
 
-  const techStack = [
-    { name: 'JavaScript', icon: '🟨', category: 'Frontend' },
-    { name: 'React', icon: '⚛️', category: 'Frontend' },
-    { name: 'TypeScript', icon: '🔷', category: 'Frontend' },
-    { name: 'Node.js', icon: '🟢', category: 'Backend' },
-    { name: 'Python', icon: '🐍', category: 'Backend' },
-    { name: 'MongoDB', icon: '🍃', category: 'Database' },
-    { name: 'PostgreSQL', icon: '🐘', category: 'Database' },
-    { name: 'Git', icon: '📊', category: 'Tools' },
-    { name: 'Docker', icon: '🐳', category: 'Tools' },
-    { name: 'AWS', icon: '☁️', category: 'Cloud' },
-    { name: 'Firebase', icon: '🔥', category: 'Cloud' },
-    { name: 'Next.js', icon: '▲', category: 'Frontend' }
-  ];
-
   const projects = [
+    {
+      title: 'LearnTube - LMS',
+      description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      tech: ['React', 'Express', 'Stripe', 'MongoDB'],
+      github: '#',
+      live: '#'
+    },
     {
       title: 'E-Commerce Platform',
       description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
@@ -79,16 +102,9 @@ const Portfolio = () => {
       live: '#'
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      tech: ['React', 'Firebase', 'Material-UI', 'WebSocket'],
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Weather Analytics Dashboard',
+      title: 'Sign Language Detection',
       description: 'Weather data visualization dashboard with interactive charts, location-based forecasts, and historical data analysis.',
-      tech: ['Python', 'Django', 'Chart.js', 'PostgreSQL'],
+      tech: ['Python', 'Tensorflow', 'Keras', 'NumPy'],
       github: '#',
       live: '#'
     }
@@ -96,28 +112,28 @@ const Portfolio = () => {
 
   const education = [
     {
-      year: '2021 - 2025',
-      degree: 'Bachelor of Technology',
-      field: 'Computer Science Engineering',
-      institution: 'XYZ University',
-      grade: 'CGPA: 8.5/10',
+      year: '2024 - Present',
+      degree: 'Master of Computer Application',
+      field: 'Computer Science & Engineering',
+      institution: 'Jadavpur University, Kolkata',
+      grade: 'CGPA: ',
       description: 'Specialized in software development, data structures, algorithms, and database management.'
     },
     {
-      year: '2019 - 2021',
-      degree: 'Higher Secondary',
-      field: 'Science (PCM)',
-      institution: 'ABC Higher Secondary School',
-      grade: '92%',
-      description: 'Mathematics, Physics, and Chemistry with focus on analytical problem-solving.'
+      year: '2021 - 2024',
+      degree: 'Bachelor of Science(Hons.)',
+      field: 'Computer Science',
+      institution: 'Burdwan Raj College',
+      grade: 'CGPA: 9.44',
+      description: 'Computer Science, Mathematics & Electronics with focus on analytical problem-solving.'
     },
     {
-      year: '2017 - 2019',
-      degree: 'Secondary Education',
-      field: 'General Studies',
-      institution: 'DEF High School',
-      grade: '95%',
-      description: 'Strong foundation in mathematics, science, and English literature.'
+      year: '2019 - 2021',
+      degree: 'Higher Secondary Education',
+      field: 'Science(PCM)',
+      institution: 'St Paul\'s Academy, Burdwan',
+      grade: '',
+      description: 'Strong foundation in mathematics, physics, chemistry and English literature.'
     }
   ];
 
@@ -130,7 +146,9 @@ const Portfolio = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">SD</span>
+                <span className="text-white font-bold text-lg">
+                  <img src="../public/logo3.png" alt="" />
+                </span>
               </div>
               <span className="font-bold text-xl text-teal-600">Sauvik Das</span>
             </div>
@@ -197,7 +215,9 @@ const Portfolio = () => {
           <div className="text-center py-20 animate-fade-in">
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mb-6 transform hover:scale-105 transition-transform duration-300">
-                <span className="text-white font-bold text-4xl">SD</span>
+                <span className="text-white font-bold text-4xl">
+                  <img className='rounded-full' src="../public/logo3.png" alt="Image" />
+                </span>
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">
@@ -207,7 +227,9 @@ const Portfolio = () => {
               Aspiring Software Engineer passionate about creating innovative solutions and building amazing digital experiences
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+              <button 
+              onClick={() => window.open('/public/routine.pdf', '_blank', 'noopener,noreferrer')}
+              className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                 <Download className="w-5 h-5" />
                 Download Resume
               </button>
@@ -370,9 +392,10 @@ const Portfolio = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {techStack.map((tech, index) => (
               <div key={index} className={`${cardClasses} border rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group`}>
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="flex justify-center items-center text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
                   {tech.icon}
                 </div>
+
                 <h3 className="font-semibold mb-1 group-hover:text-teal-600 transition-colors">
                   {tech.name}
                 </h3>
@@ -399,13 +422,13 @@ const Portfolio = () => {
                 I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology.
               </p>
               <div className="space-y-4">
-                <a href="mailto:sauvik@example.com" className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
+                <a href="mailto:sgc.burdwan@gmail.com" className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
                   <Mail className="w-5 h-5" />
-                  sauvik@example.com
+                  sgc.burdwan@gmail.com
                 </a>
-                <a href="tel:+1234567890" className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
+                <a href="tel:9002486020" className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
                   <Phone className="w-5 h-5" />
-                  +91 12345 67890
+                  +91 90024 86020
                 </a>
                 <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300">
                   <MapPin className="w-5 h-5" />
@@ -413,13 +436,13 @@ const Portfolio = () => {
                 </div>
               </div>
               <div className="flex gap-4 mt-6">
-                <a href="#" className="p-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                <a href="https://github.com/Sauvik2308" className="p-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="p-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                <a href="https://www.linkedin.com/in/sauvik-das-0a8a67244" className="p-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="mailto:sauvik@example.com" className="p-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                <a href="mailto:sgc.burdwan@gmail.com" className="p-3 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
@@ -457,7 +480,9 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex justify-center items-center space-x-3 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">SD</span>
+              <span className="text-white font-bold">
+                <img src="../public/logo3.png" alt="" />
+              </span>
             </div>
             <span className="font-bold text-lg text-teal-600">Sauvik Das</span>
           </div>
@@ -465,13 +490,13 @@ const Portfolio = () => {
             Aspiring Software Engineer • Building the future, one line of code at a time
           </p>
           <div className="flex justify-center gap-6 mb-4">
-            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
+            <a href="https://github.com/Sauvik2308" className="text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
+            <a href="https://www.linkedin.com/in/sauvik-das-0a8a67244" className="text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:sauvik@example.com" className="text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
+            <a href="mailto:sgc.burdwan@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
               <Mail className="w-5 h-5" />
             </a>
           </div>
