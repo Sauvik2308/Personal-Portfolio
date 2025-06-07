@@ -228,7 +228,7 @@ const Portfolio = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
-              onClick={() => window.open('/public/routine.pdf', '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open('/public/resume.pdf', '_blank', 'noopener,noreferrer')}
               className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                 <Download className="w-5 h-5" />
                 Download Resume
