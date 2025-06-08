@@ -19,14 +19,15 @@ import {
   Smartphone
 } from 'lucide-react';
 import { IoLogoJavascript} from "react-icons/io5";
-import { FaReact, FaPython, FaJava } from "react-icons/fa";
-import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiPostgresql } from "react-icons/si";
-import { FaNode, FaGitAlt } from "react-icons/fa6";
+import { FaReact, FaJava } from "react-icons/fa";
+import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiExpress, SiPostgresql, SiPython } from "react-icons/si";
+import { FaNode, FaPython, FaGitAlt } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 import HeroText from './HeroText';
+import Logo1 from './pythonLogo.jsx';
 
   const techStack = [
-    { name: 'JavaScript', icon: <IoLogoJavascript color='Yellow' />, category: 'Frontend' },
+    { name: 'JavaScript', icon: <IoLogoJavascript color='#e7ed32' />, category: 'Frontend' },
 
     { name: 'React', icon: <FaReact color='Blue' />, category: 'Frontend' },
 
@@ -46,9 +47,9 @@ import HeroText from './HeroText';
 
     { name: 'MySQL', icon: <SiMysql color='blue' />, category: 'Database' },
 
-    // { name: 'Firebase', icon: '🔥', category: 'Cloud' },
+    { name: 'Express', icon: <SiExpress />, category: 'Backend' },
 
-    // { name: 'Next.js', icon: '▲', category: 'Frontend' }
+    { name: 'Python', icon: <Logo1 />, category: 'Frontend' }
   ];
 
 const Portfolio = () => {
@@ -117,7 +118,7 @@ const Portfolio = () => {
       degree: 'Master of Computer Application',
       field: 'Computer Science & Engineering',
       institution: 'Jadavpur University, Kolkata',
-      grade: 'CGPA: ',
+      grade: 'CGPA: Appearing',
       description: 'Specialized in software development, data structures, algorithms, and database management.'
     },
     {
@@ -133,7 +134,7 @@ const Portfolio = () => {
       degree: 'Higher Secondary Education',
       field: 'Science(PCM)',
       institution: 'St Paul\'s Academy, Burdwan',
-      grade: '',
+      grade: 'Percentage: 94%',
       description: 'Strong foundation in mathematics, physics, chemistry and English literature.'
     }
   ];
@@ -151,7 +152,7 @@ const Portfolio = () => {
                   <img src="/logo3.png" alt="" />
                 </span>
               </div>
-              <span className="font-bold text-xl text-teal-600">Sauvik Das</span>
+              <span className="font-bold text-xl text-teal-600"></span>
             </div>
 
             {/* Desktop Navigation */}
@@ -217,11 +218,11 @@ const Portfolio = () => {
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mb-6 transform hover:scale-105 transition-transform duration-300">
                 <span className="text-white font-bold text-4xl">
-                  <img className='rounded-full' src="/logo3.png" alt="Image" />
+                  <img className="w-full h-full object-cover rounded-full" src="/public/selfGhibli.png" alt="Image" />
                 </span>
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl  mb-6 bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent" >
               Sauvik Das
             </h1>
             <HeroText />
@@ -279,12 +280,12 @@ const Portfolio = () => {
                 <div className={`${cardClasses} border rounded-lg p-4 text-center transform hover:scale-105 transition-all duration-300`}>
                   <Code className="w-8 h-8 text-teal-600 mx-auto mb-2" />
                   <h4 className="font-semibold">Frontend</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">React, JS, CSS</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">React, JS, Tailwind</p>
                 </div>
                 <div className={`${cardClasses} border rounded-lg p-4 text-center transform hover:scale-105 transition-all duration-300`}>
                   <Database className="w-8 h-8 text-teal-600 mx-auto mb-2" />
                   <h4 className="font-semibold">Backend</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Node.js, Python</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Node.js, Express</p>
                 </div>
                 <div className={`${cardClasses} border rounded-lg p-4 text-center transform hover:scale-105 transition-all duration-300`}>
                   <Globe className="w-8 h-8 text-teal-600 mx-auto mb-2" />
