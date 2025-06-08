@@ -49,7 +49,7 @@ import Logo1 from './pythonLogo.jsx';
 
     { name: 'Express', icon: <SiExpress />, category: 'Backend' },
 
-    { name: 'Python', icon: <Logo1 />, category: 'Frontend' }
+    { name: 'Python', icon: <FaPython />, category: 'Frontend' }
   ];
 
 const Portfolio = () => {
