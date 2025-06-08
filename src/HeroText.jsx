@@ -2,7 +2,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 function HeroText() {
   return (
-    <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+    <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Source Code Pro, monospace' }}>
       <Typewriter
         words={[
           'Aspiring Software Engineer passionate about creating innovative solutions and building amazing digital experiences....',
