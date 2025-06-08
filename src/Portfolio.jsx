@@ -23,6 +23,7 @@ import { FaReact, FaPython, FaJava } from "react-icons/fa";
 import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiPostgresql } from "react-icons/si";
 import { FaNode, FaGitAlt } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
+import HeroText from './HeroText';
 
   const techStack = [
     { name: 'JavaScript', icon: <IoLogoJavascript color='Yellow' />, category: 'Frontend' },
@@ -223,9 +224,7 @@ const Portfolio = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">
               Sauvik Das
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Aspiring Software Engineer passionate about creating innovative solutions and building amazing digital experiences
-            </p>
+            <HeroText />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
               onClick={() => window.open('/resume.pdf', '_blank', 'noopener,noreferrer')}
