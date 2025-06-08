@@ -218,7 +218,7 @@ const Portfolio = () => {
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mb-6 transform hover:scale-105 transition-transform duration-300">
                 <span className="text-white font-bold text-4xl">
-                  <img className="w-full h-full object-cover rounded-full" src="/public/selfGhibli.png" alt="Image" />
+                  <img className="w-full h-full object-cover rounded-full" src="/selfGhibli.png" alt="Image" />
                 </span>
               </div>
             </div>
