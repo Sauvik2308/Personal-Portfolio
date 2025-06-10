@@ -18,44 +18,46 @@ import {
   Globe,
   Smartphone
 } from 'lucide-react';
-import { IoLogoJavascript} from "react-icons/io5";
+import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact, FaJava } from "react-icons/fa";
-import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiExpress, SiPostgresql, SiPython } from "react-icons/si";
+import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiExpress } from "react-icons/si";
 import { FaNode, FaPython, FaGitAlt } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
+
 import HeroText from './HeroText';
-import Logo1 from './pythonLogo.jsx';
+import CodingProfiles from './CodingProfiles.jsx';
 
-  const techStack = [
-    { name: 'JavaScript', icon: <IoLogoJavascript color='#e7ed32' />, category: 'Frontend' },
+const techStack = [
+  { name: 'JavaScript', icon: <IoLogoJavascript color='#e7ed32' />, category: 'Frontend' },
 
-    { name: 'React', icon: <FaReact color='Blue' />, category: 'Frontend' },
+  { name: 'React', icon: <FaReact color='Blue' />, category: 'Frontend' },
 
-    { name: 'TypeScript', icon: <SiTypescript color='Skyblue' />, category: 'Frontend' },
+  { name: 'TypeScript', icon: <SiTypescript color='Skyblue' />, category: 'Frontend' },
 
-    { name: 'Node.js', icon: <FaNode color='Green' />, category: 'Backend' },
+  { name: 'Node.js', icon: <FaNode color='Green' />, category: 'Backend' },
 
-    { name: 'Java', icon: <FaJava color='Brown' />, category: 'Backend' },
+  { name: 'Java', icon: <FaJava color='Brown' />, category: 'Backend' },
 
-    { name: 'MongoDB', icon: <SiMongodb color='Green' />, category: 'Database' },
+  { name: 'MongoDB', icon: <SiMongodb color='Green' />, category: 'Database' },
 
-    { name: 'PostgreSQL', icon: <BiLogoPostgresql color='darkblue' />, category: 'Database' },
+  { name: 'PostgreSQL', icon: <BiLogoPostgresql color='darkblue' />, category: 'Database' },
 
-    { name: 'Git', icon: <FaGitAlt color='red' /> , category: 'Tools' },
+  { name: 'Git', icon: <FaGitAlt color='red' />, category: 'Tools' },
 
-    { name: 'Postman', icon: <SiPostman color='#f1340b' />, category: 'Tools' },
+  { name: 'Postman', icon: <SiPostman color='#f1340b' />, category: 'Tools' },
 
-    { name: 'MySQL', icon: <SiMysql color='blue' />, category: 'Database' },
+  { name: 'MySQL', icon: <SiMysql color='blue' />, category: 'Database' },
 
-    { name: 'Express', icon: <SiExpress />, category: 'Backend' },
+  { name: 'Express', icon: <SiExpress />, category: 'Backend' },
 
-    { name: 'Python', icon: <FaPython />, category: 'Frontend' }
-  ];
+  { name: 'Python', icon: <FaPython />, category: 'Frontend' }
+];
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [selectedProfile, setSelectedProfile] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,6 +89,100 @@ const Portfolio = () => {
   const cardClasses = isDarkMode
     ? 'bg-gray-800 border-gray-700'
     : 'bg-white border-gray-200';
+
+
+  const profileData = {
+    leetcode: {
+      title: "LeetCode",
+      color: "from-orange-500 to-yellow-500",
+      bgColor: "from-orange-500/10 to-yellow-500/10",
+      hoverBgColor: "from-orange-500/20 to-yellow-500/20",
+      textColor: "orange-500",
+      stats: {
+        "Problems Solved": "847",
+        "Contest Rating": "1,856",
+        "Global Ranking": "Top 5%",
+        "Contest Attended": "45",
+        "Acceptance Rate": "67.8%",
+        "Languages Used": "Python, Java, C++",
+        "Favorite Topics": "Dynamic Programming, Trees, Graphs",
+        "Current Streak": "127 days"
+      },
+      description: "Consistent problem solver with focus on algorithmic thinking and optimization. Regular contest participant with strong performance in weekly and biweekly contests."
+    },
+    hackerrank: {
+      title: "HackerRank",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-500/10 to-emerald-500/10",
+      hoverBgColor: "from-green-500/20 to-emerald-500/20",
+      textColor: "green-500",
+      stats: {
+        "Problem Solving": "5 ⭐ Gold Badge",
+        "Java": "5 ⭐ Gold Badge",
+        "Python": "5 ⭐ Gold Badge",
+        "Algorithms": "5 ⭐ Gold Badge",
+        "Data Structures": "4 ⭐ Silver Badge",
+        "Mathematics": "3 ⭐ Bronze Badge",
+        "SQL": "4 ⭐ Silver Badge",
+        "Certificates": "12 Skill Certifications"
+      },
+      description: "Achieved multiple gold badges across various domains. Strong foundation in data structures, algorithms, and multiple programming languages with certified skills."
+    },
+    codeforces: {
+      title: "Codeforces",
+      color: "from-blue-500 to-purple-500",
+      bgColor: "from-blue-500/10 to-purple-500/10",
+      hoverBgColor: "from-blue-500/20 to-purple-500/20",
+      textColor: "blue-500",
+      stats: {
+        "Current Rating": "1,647 (Expert)",
+        "Max Rating": "1,723 (Expert)",
+        "Contest Participated": "78",
+        "Problems Solved": "423",
+        "Global Rank": "Top 8%",
+        "Best Contest Rank": "#127 (Div. 2)",
+        "Favorite Categories": "Greedy, Implementation, Math",
+        "Contribution": "+15"
+      },
+      description: "Active competitive programmer with Expert rating. Regular participation in Div. 2 contests with consistent performance and problem-solving skills."
+    },
+    codechef: {
+      title: "CodeChef",
+      color: "from-amber-500 to-red-500",
+      bgColor: "from-amber-500/10 to-red-500/10",
+      hoverBgColor: "from-amber-500/20 to-red-500/20",
+      textColor: "amber-500",
+      stats: {
+        "Current Rating": "1,847 (4⭐)",
+        "Max Rating": "1,923 (4⭐)",
+        "Global Ranking": "Top 6%",
+        "Country Ranking": "Top 3% (India)",
+        "Long Challenge": "45 participated",
+        "Cook-Off": "23 participated",
+        "Lunchtime": "31 participated",
+        "Problems Solved": "298"
+      },
+      description: "Consistent 4-star rated programmer with strong performance in monthly contests. Regular participant in Long Challenge, Cook-Off, and Lunchtime contests."
+    },
+    github: {
+      title: "GitHub",
+      color: "from-gray-600 to-gray-800",
+      bgColor: "from-gray-600/10 to-gray-800/10",
+      hoverBgColor: "from-gray-600/20 to-gray-800/20",
+      textColor: "gray-600",
+      stats: {
+        "Public Repositories": "67",
+        "Total Commits": "1,247",
+        "Pull Requests": "89",
+        "Issues Resolved": "142",
+        "Followers": "234",
+        "Following": "189",
+        "Organizations": "5",
+        "Most Used Language": "JavaScript (38%)"
+      },
+      description: "Active open-source contributor with diverse project portfolio. Strong collaboration skills with multiple contributions to community projects and personal repositories."
+    }
+  };
 
   const projects = [
     {
@@ -227,9 +323,9 @@ const Portfolio = () => {
             </h1>
             <HeroText />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-              onClick={() => window.open('/resume.pdf', '_blank', 'noopener,noreferrer')}
-              className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+              <button
+                onClick={() => window.open('/resume.pdf', '_blank', 'noopener,noreferrer')}
+                className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                 <Download className="w-5 h-5" />
                 Download Resume
               </button>
@@ -342,6 +438,182 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+      {/* Coding Profiles Section */}
+
+      {/* Coding Profiles Section */}
+      <section id="coding-profiles" className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-teal-600">Coding Profiles</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-teal-500 to-emerald-500 mx-auto mb-8"></div>
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Check out my coding journey across various competitive programming platforms
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+            {/* LeetCode */}
+            <div
+              className="coding-profile-card group cursor-pointer"
+              onClick={() => setSelectedProfile('leetcode')}
+            >
+              <div className={`${cardClasses} border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 transform group-hover:scale-110 w-48 h-48 flex flex-col items-center justify-center relative overflow-hidden hover-bounce`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${profileData.leetcode.bgColor} group-hover:${profileData.leetcode.hoverBgColor} transition-all duration-300`}></div>
+                <div className="relative z-10 text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.leetcode.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg pulse-animation`}>
+                    LC
+                  </div>
+                  <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.leetcode.textColor} transition-colors`}>LeetCode</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Problem Solving</p>
+                  <div className={`mt-3 px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs wiggle-animation`}>
+                    847 Problems
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* HackerRank */}
+            <div
+              className="coding-profile-card group cursor-pointer"
+              onClick={() => setSelectedProfile('hackerrank')}
+            >
+              <div className={`${cardClasses} border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 transform group-hover:scale-110 w-48 h-48 flex flex-col items-center justify-center relative overflow-hidden hover-shake`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${profileData.hackerrank.bgColor} group-hover:${profileData.hackerrank.hoverBgColor} transition-all duration-300`}></div>
+                <div className="relative z-10 text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.hackerrank.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg glow-animation`}>
+                    HR
+                  </div>
+                  <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.hackerrank.textColor} transition-colors`}>HackerRank</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Algorithms & DS</p>
+                  <div className={`mt-3 px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs star-animation`}>
+                    5⭐ Gold Badge
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Codeforces */}
+            <div
+              className="coding-profile-card group cursor-pointer"
+              onClick={() => setSelectedProfile('codeforces')}
+            >
+              <div className={`${cardClasses} border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 transform group-hover:scale-110 w-48 h-48 flex flex-col items-center justify-center relative overflow-hidden hover-tilt`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${profileData.codeforces.bgColor} group-hover:${profileData.codeforces.hoverBgColor} transition-all duration-300`}></div>
+                <div className="relative z-10 text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.codeforces.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg rotate-animation`}>
+                    CF
+                  </div>
+                  <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.codeforces.textColor} transition-colors`}>Codeforces</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Competitive</p>
+                  <div className={`mt-3 px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs float-animation`}>
+                    Expert (1647)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CodeChef */}
+            <div
+              className="coding-profile-card group cursor-pointer"
+              onClick={() => setSelectedProfile('codechef')}
+            >
+              <div className={`${cardClasses} border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 transform group-hover:scale-110 w-48 h-48 flex flex-col items-center justify-center relative overflow-hidden hover-flip`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${profileData.codechef.bgColor} group-hover:${profileData.codechef.hoverBgColor} transition-all duration-300`}></div>
+                <div className="relative z-10 text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.codechef.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg zoom-animation`}>
+                    CC
+                  </div>
+                  <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.codechef.textColor} transition-colors`}>CodeChef</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Monthly Contests</p>
+                  <div className={`mt-3 px-3 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full text-xs bounce-animation`}>
+                    4⭐ Rating
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* GitHub */}
+            <div
+              className="coding-profile-card group cursor-pointer"
+              onClick={() => setSelectedProfile('github')}
+            >
+              <div className={`${cardClasses} border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 transform group-hover:scale-110 w-48 h-48 flex flex-col items-center justify-center relative overflow-hidden hover-wobble`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${profileData.github.bgColor} group-hover:${profileData.github.hoverBgColor} transition-all duration-300`}></div>
+                <div className="relative z-10 text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.github.color} rounded-xl flex items-center justify-center text-white shadow-lg slide-animation`}>
+                    <Github className="w-8 h-8" />
+                  </div>
+                  <h3 className={`font-bold text-lg mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors`}>GitHub</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Open Source</p>
+                  <div className={`mt-3 px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-xs heartbeat-animation`}>
+                    67 Repos
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Profile Modal */}
+      {selectedProfile && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => setSelectedProfile(null)}>
+          <div className={`${cardClasses} border rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl`} onClick={(e) => e.stopPropagation()}>
+            <div className="p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${profileData[selectedProfile].color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg`}>
+                    {selectedProfile === 'github' ? <Github className="w-8 h-8" /> : selectedProfile.toUpperCase().slice(0, 2)}
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold text-teal-600">{profileData[selectedProfile].title}</h2>
+                    <p className="text-gray-600 dark:text-gray-300">Coding Profile Statistics</p>
+                  </div>
+                </div>
+                <button 
+                  onClick={() => setSelectedProfile(null)}
+                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              
+              <div className="mb-6">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {profileData[selectedProfile].description}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {Object.entries(profileData[selectedProfile].stats).map(([key, value], index) => (
+                  <div key={index} className={`${cardClasses} border rounded-lg p-4 hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-gray-700 dark:text-gray-300">{key}</span>
+                      <span className={`font-bold text-${profileData[selectedProfile].textColor}`}>{value}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex gap-4 justify-center">
+                <button 
+                  onClick={() => window.open(`https://${selectedProfile === 'leetcode' ? 'leetcode.com' : selectedProfile === 'hackerrank' ? 'hackerrank.com' : selectedProfile === 'codeforces' ? 'codeforces.com' : selectedProfile === 'codechef' ? 'codechef.com' : 'github.com'}/yourusername`, '_blank')}
+                  className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                  Visit Profile
+                </button>
+                <button 
+                  onClick={() => setSelectedProfile(null)}
+                  className="border-2 border-teal-500 text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-500 hover:text-white transition-all duration-300"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4">
