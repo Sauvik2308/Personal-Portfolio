@@ -109,7 +109,8 @@ const Portfolio = () => {
         "Current Streak": ""
       },
       description: "Consistent problem solver with focus on algorithmic thinking and optimization. Regular contest participant with strong performance in weekly and biweekly contests.",
-      profileLink: "/under-maintenance"
+      profileLink: "/under-maintenance",
+      icon: <SiLeetcode />
     },
     hackerrank: {
       title: "HackerRank",
@@ -128,7 +129,8 @@ const Portfolio = () => {
         "Certificates": ""
       },
       description: "Achieved multiple gold badges across various domains. Strong foundation in data structures, algorithms, and multiple programming languages with certified skills.",
-      profileLink: "/under-maintenance"
+      profileLink: "/under-maintenance",
+      icon: <SiHackerrank />
     },
     codeforces: {
       title: "Codeforces",
@@ -147,7 +149,8 @@ const Portfolio = () => {
         "Contribution": ""
       },
       description: "Active competitive programmer with Expert rating. Regular participation in Div. 2 contests with consistent performance and problem-solving skills.",
-      profileLink: "/under-maintenance"
+      profileLink: "/under-maintenance",
+      icon: <SiCodeforces />
     },
     codechef: {
       title: "CodeChef",
@@ -166,7 +169,8 @@ const Portfolio = () => {
         "Problems Solved": ""
       },
       description: "Consistent 4-star rated programmer with strong performance in monthly contests. Regular participant in Long Challenge, Cook-Off, and Lunchtime contests.",
-      profileLink: "/under-maintenance"
+      profileLink: "/under-maintenance",
+      icon: <SiCodechef />
     },
     github: {
       title: "GitHub",
@@ -568,7 +572,7 @@ const Portfolio = () => {
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-4">
                   <div className={`w-16 h-16 bg-gradient-to-r ${profileData[selectedProfile].color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg`}>
-                    {selectedProfile === 'github' ? <Github className="w-8 h-8" /> : selectedProfile.toUpperCase().slice(0, 2)}
+                    {selectedProfile === 'github' ? <Github className="w-8 h-8" /> : profileData[selectedProfile].icon}
                   </div>
                   <div>
                     <h2 className="text-3xl font-bold text-teal-600">{profileData[selectedProfile].title}</h2>
