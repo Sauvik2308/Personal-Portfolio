@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact, FaJava } from "react-icons/fa";
-import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiExpress } from "react-icons/si";
+import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiExpress, SiLeetcode, SiHackerrank, SiCodeforces, SiCodechef } from "react-icons/si";
 import { FaNode, FaPython, FaGitAlt } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 
@@ -99,16 +99,17 @@ const Portfolio = () => {
       hoverBgColor: "from-orange-500/20 to-yellow-500/20",
       textColor: "orange-500",
       stats: {
-        "Problems Solved": "847",
-        "Contest Rating": "1,856",
-        "Global Ranking": "Top 5%",
-        "Contest Attended": "45",
-        "Acceptance Rate": "67.8%",
-        "Languages Used": "Python, Java, C++",
-        "Favorite Topics": "Dynamic Programming, Trees, Graphs",
-        "Current Streak": "127 days"
+        "Problems Solved": "",
+        "Contest Rating": "",
+        "Global Ranking": "",
+        "Contest Attended": "",
+        "Acceptance Rate": "",
+        "Languages Used": "",
+        "Favorite Topics": "",
+        "Current Streak": ""
       },
-      description: "Consistent problem solver with focus on algorithmic thinking and optimization. Regular contest participant with strong performance in weekly and biweekly contests."
+      description: "Consistent problem solver with focus on algorithmic thinking and optimization. Regular contest participant with strong performance in weekly and biweekly contests.",
+      profileLink: "/under-maintenance"
     },
     hackerrank: {
       title: "HackerRank",
@@ -117,16 +118,17 @@ const Portfolio = () => {
       hoverBgColor: "from-green-500/20 to-emerald-500/20",
       textColor: "green-500",
       stats: {
-        "Problem Solving": "5 ⭐ Gold Badge",
-        "Java": "5 ⭐ Gold Badge",
-        "Python": "5 ⭐ Gold Badge",
-        "Algorithms": "5 ⭐ Gold Badge",
-        "Data Structures": "4 ⭐ Silver Badge",
-        "Mathematics": "3 ⭐ Bronze Badge",
-        "SQL": "4 ⭐ Silver Badge",
-        "Certificates": "12 Skill Certifications"
+        "Problem Solving": "",
+        "Java": "",
+        "Python": "",
+        "Algorithms": "",
+        "Data Structures": "",
+        "Mathematics": "",
+        "SQL": "",
+        "Certificates": ""
       },
-      description: "Achieved multiple gold badges across various domains. Strong foundation in data structures, algorithms, and multiple programming languages with certified skills."
+      description: "Achieved multiple gold badges across various domains. Strong foundation in data structures, algorithms, and multiple programming languages with certified skills.",
+      profileLink: "/under-maintenance"
     },
     codeforces: {
       title: "Codeforces",
@@ -135,16 +137,17 @@ const Portfolio = () => {
       hoverBgColor: "from-blue-500/20 to-purple-500/20",
       textColor: "blue-500",
       stats: {
-        "Current Rating": "1,647 (Expert)",
-        "Max Rating": "1,723 (Expert)",
-        "Contest Participated": "78",
-        "Problems Solved": "423",
-        "Global Rank": "Top 8%",
-        "Best Contest Rank": "#127 (Div. 2)",
-        "Favorite Categories": "Greedy, Implementation, Math",
-        "Contribution": "+15"
+        "Current Rating": "",
+        "Max Rating": "",
+        "Contest Participated": "",
+        "Problems Solved": "",
+        "Global Rank": "",
+        "Best Contest Rank": "",
+        "Favorite Categories": "",
+        "Contribution": ""
       },
-      description: "Active competitive programmer with Expert rating. Regular participation in Div. 2 contests with consistent performance and problem-solving skills."
+      description: "Active competitive programmer with Expert rating. Regular participation in Div. 2 contests with consistent performance and problem-solving skills.",
+      profileLink: "/under-maintenance"
     },
     codechef: {
       title: "CodeChef",
@@ -153,16 +156,17 @@ const Portfolio = () => {
       hoverBgColor: "from-amber-500/20 to-red-500/20",
       textColor: "amber-500",
       stats: {
-        "Current Rating": "1,847 (4⭐)",
-        "Max Rating": "1,923 (4⭐)",
-        "Global Ranking": "Top 6%",
-        "Country Ranking": "Top 3% (India)",
-        "Long Challenge": "45 participated",
-        "Cook-Off": "23 participated",
-        "Lunchtime": "31 participated",
-        "Problems Solved": "298"
+        "Current Rating": "",
+        "Max Rating": "",
+        "Global Ranking": "",
+        "Country Ranking": "",
+        "Long Challenge": "",
+        "Cook-Off": "",
+        "Lunchtime": "",
+        "Problems Solved": ""
       },
-      description: "Consistent 4-star rated programmer with strong performance in monthly contests. Regular participant in Long Challenge, Cook-Off, and Lunchtime contests."
+      description: "Consistent 4-star rated programmer with strong performance in monthly contests. Regular participant in Long Challenge, Cook-Off, and Lunchtime contests.",
+      profileLink: "/under-maintenance"
     },
     github: {
       title: "GitHub",
@@ -171,16 +175,17 @@ const Portfolio = () => {
       hoverBgColor: "from-gray-600/20 to-gray-800/20",
       textColor: "gray-600",
       stats: {
-        "Public Repositories": "67",
-        "Total Commits": "1,247",
-        "Pull Requests": "89",
-        "Issues Resolved": "142",
-        "Followers": "234",
-        "Following": "189",
-        "Organizations": "5",
-        "Most Used Language": "JavaScript (38%)"
+        "Public Repositories": "",
+        "Total Commits": "",
+        "Pull Requests": "",
+        "Issues Resolved": "",
+        "Followers": "",
+        "Following": "",
+        "Organizations": "",
+        "Most Used Language": ""
       },
-      description: "Active open-source contributor with diverse project portfolio. Strong collaboration skills with multiple contributions to community projects and personal repositories."
+      description: "Active open-source contributor with diverse project portfolio. Strong collaboration skills with multiple contributions to community projects and personal repositories.",
+      profileLink: "/under-maintenance"
     }
   };
 
@@ -461,12 +466,12 @@ const Portfolio = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${profileData.leetcode.bgColor} group-hover:${profileData.leetcode.hoverBgColor} transition-all duration-300`}></div>
                 <div className="relative z-10 text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.leetcode.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg pulse-animation`}>
-                    LC
+                    <SiLeetcode />
                   </div>
                   <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.leetcode.textColor} transition-colors`}>LeetCode</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Problem Solving</p>
                   <div className={`mt-3 px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs wiggle-animation`}>
-                    847 Problems
+                    100+ Problems
                   </div>
                 </div>
               </div>
@@ -481,7 +486,7 @@ const Portfolio = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${profileData.hackerrank.bgColor} group-hover:${profileData.hackerrank.hoverBgColor} transition-all duration-300`}></div>
                 <div className="relative z-10 text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.hackerrank.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg glow-animation`}>
-                    HR
+                    <SiHackerrank />
                   </div>
                   <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.hackerrank.textColor} transition-colors`}>HackerRank</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Algorithms & DS</p>
@@ -501,12 +506,12 @@ const Portfolio = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${profileData.codeforces.bgColor} group-hover:${profileData.codeforces.hoverBgColor} transition-all duration-300`}></div>
                 <div className="relative z-10 text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.codeforces.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg rotate-animation`}>
-                    CF
+                    <SiCodeforces />
                   </div>
                   <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.codeforces.textColor} transition-colors`}>Codeforces</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Competitive</p>
                   <div className={`mt-3 px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs float-animation`}>
-                    Expert (1647)
+                    ---
                   </div>
                 </div>
               </div>
@@ -521,12 +526,12 @@ const Portfolio = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${profileData.codechef.bgColor} group-hover:${profileData.codechef.hoverBgColor} transition-all duration-300`}></div>
                 <div className="relative z-10 text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.codechef.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg zoom-animation`}>
-                    CC
+                    <SiCodechef />
                   </div>
                   <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.codechef.textColor} transition-colors`}>CodeChef</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Monthly Contests</p>
                   <div className={`mt-3 px-3 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full text-xs bounce-animation`}>
-                    4⭐ Rating
+                    ---
                   </div>
                 </div>
               </div>
@@ -546,7 +551,7 @@ const Portfolio = () => {
                   <h3 className={`font-bold text-lg mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors`}>GitHub</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Open Source</p>
                   <div className={`mt-3 px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-xs heartbeat-animation`}>
-                    67 Repos
+                    ---
                   </div>
                 </div>
               </div>
@@ -597,7 +602,7 @@ const Portfolio = () => {
 
               <div className="mt-8 flex gap-4 justify-center">
                 <button 
-                  onClick={() => window.open(`https://${selectedProfile === 'leetcode' ? 'leetcode.com' : selectedProfile === 'hackerrank' ? 'hackerrank.com' : selectedProfile === 'codeforces' ? 'codeforces.com' : selectedProfile === 'codechef' ? 'codechef.com' : 'github.com'}/yourusername`, '_blank')}
+                  onClick={() => window.open(profileData[selectedProfile].profileLink, '_blank')}
                   className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
                 >
                   <ExternalLink className="w-5 h-5" />
