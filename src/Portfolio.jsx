@@ -825,7 +825,7 @@ const Portfolio = () => {
             © 2025 Sauvik Das. All rights reserved.
           </p>
         </div>
-      </footer>
+      </footer> 
 
       <style jsx>{`
         .animate-fade-in {
