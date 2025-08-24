@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact, FaJava } from "react-icons/fa";
-import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiExpress, SiLeetcode, SiHackerrank, SiCodeforces, SiCodechef } from "react-icons/si";
+import { SiTypescript, SiMysql, SiPostman, SiMongodb, SiExpress, SiLeetcode, SiHackerrank, SiCodeforces, SiCodechef, SiGeeksforgeeks } from "react-icons/si";
 import { FaNode, FaPython, FaGitAlt } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
 
@@ -99,18 +99,38 @@ const Portfolio = () => {
       hoverBgColor: "from-orange-500/20 to-yellow-500/20",
       textColor: "orange-500",
       stats: {
-        "Problems Solved": "",
-        "Contest Rating": "",
-        "Global Ranking": "",
-        "Contest Attended": "",
-        "Acceptance Rate": "",
-        "Languages Used": "",
-        "Favorite Topics": "",
-        "Current Streak": ""
+        "Problems Solved": "200+",
+        "Contest Rating": "--",
+        "Global Ranking": "--",
+        "Contest Attended": "--",
+        "Acceptance Rate": "--",
+        "Languages Used": "--",
+        "Favorite Topics": "--",
+        "Current Streak": "--"
       },
       description: "Consistent problem solver with focus on algorithmic thinking and optimization. Regular contest participant with strong performance in weekly and biweekly contests.",
-      profileLink: "/under-maintenance",
+      profileLink: "https://leetcode.com/u/SauvikDas/",
       icon: <SiLeetcode />
+    },
+    gfg: {
+      title: "GeeksForGeeks",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-white-500/10 to-emerald-500/10",
+      hoverBgColor: "from-green-500/20 to-emerald-500/20",
+      textColor: "green-500",
+      stats: {
+        "Problems Solved": "100+",
+        "Contest Rating": "--",
+        "Global Ranking": "--",
+        "Contest Attended": "--",
+        "Acceptance Rate": "--",
+        "Languages Used": "--",
+        "Favorite Topics": "--",
+        "Current Streak": "--"
+      },
+      description: "Achieved multiple gold badges across various domains. Strong foundation in data structures, algorithms, and multiple programming languages with certified skills.",
+      profileLink: "https://www.geeksforgeeks.org/user/sgcburdwan/",
+      icon: <SiGeeksforgeeks />
     },
     hackerrank: {
       title: "HackerRank",
@@ -119,17 +139,17 @@ const Portfolio = () => {
       hoverBgColor: "from-green-500/20 to-emerald-500/20",
       textColor: "green-500",
       stats: {
-        "Problem Solving": "",
-        "Java": "",
-        "Python": "",
-        "Algorithms": "",
-        "Data Structures": "",
-        "Mathematics": "",
-        "SQL": "",
-        "Certificates": ""
+        "Problem Solving": "--",
+        "Java": "--",
+        "Python": "--",
+        "Algorithms": "--",
+        "Data Structures": "--",
+        "Mathematics": "--",
+        "SQL": "--",
+        "Certificates": "--"
       },
       description: "Achieved multiple gold badges across various domains. Strong foundation in data structures, algorithms, and multiple programming languages with certified skills.",
-      profileLink: "/under-maintenance",
+      profileLink: "https://www.hackerrank.com/profile/sgc_burdwan",
       icon: <SiHackerrank />
     },
     codeforces: {
@@ -139,39 +159,39 @@ const Portfolio = () => {
       hoverBgColor: "from-blue-500/20 to-purple-500/20",
       textColor: "blue-500",
       stats: {
-        "Current Rating": "",
-        "Max Rating": "",
-        "Contest Participated": "",
-        "Problems Solved": "",
-        "Global Rank": "",
-        "Best Contest Rank": "",
-        "Favorite Categories": "",
-        "Contribution": ""
+        "Current Rating": "--",
+        "Max Rating": "--",
+        "Contest Participated": "--",
+        "Problems Solved": "--",
+        "Global Rank": "--",
+        "Best Contest Rank": "--",
+        "Favorite Categories": "--",
+        "Contribution": "--"
       },
       description: "Active competitive programmer with Expert rating. Regular participation in Div. 2 contests with consistent performance and problem-solving skills.",
-      profileLink: "/under-maintenance",
+      profileLink: "https://codeforces.com/profile/dassauvik08",
       icon: <SiCodeforces />
     },
-    codechef: {
-      title: "CodeChef",
-      color: "from-amber-500 to-red-500",
-      bgColor: "from-amber-500/10 to-red-500/10",
-      hoverBgColor: "from-amber-500/20 to-red-500/20",
-      textColor: "amber-500",
-      stats: {
-        "Current Rating": "",
-        "Max Rating": "",
-        "Global Ranking": "",
-        "Country Ranking": "",
-        "Long Challenge": "",
-        "Cook-Off": "",
-        "Lunchtime": "",
-        "Problems Solved": ""
-      },
-      description: "Consistent 4-star rated programmer with strong performance in monthly contests. Regular participant in Long Challenge, Cook-Off, and Lunchtime contests.",
-      profileLink: "/under-maintenance",
-      icon: <SiCodechef />
-    },
+    // codechef: {
+    //   title: "CodeChef",
+    //   color: "from-amber-500 to-red-500",
+    //   bgColor: "from-amber-500/10 to-red-500/10",
+    //   hoverBgColor: "from-amber-500/20 to-red-500/20",
+    //   textColor: "amber-500",
+    //   stats: {
+    //     "Current Rating": "",
+    //     "Max Rating": "",
+    //     "Global Ranking": "",
+    //     "Country Ranking": "",
+    //     "Long Challenge": "",
+    //     "Cook-Off": "",
+    //     "Lunchtime": "",
+    //     "Problems Solved": ""
+    //   },
+    //   description: "Consistent 4-star rated programmer with strong performance in monthly contests. Regular participant in Long Challenge, Cook-Off, and Lunchtime contests.",
+    //   profileLink: "/under-maintenance",
+    //   icon: <SiCodechef />
+    // },
     github: {
       title: "GitHub",
       color: "from-gray-600 to-gray-800",
@@ -179,40 +199,40 @@ const Portfolio = () => {
       hoverBgColor: "from-gray-600/20 to-gray-800/20",
       textColor: "gray-600",
       stats: {
-        "Public Repositories": "",
-        "Total Commits": "",
-        "Pull Requests": "",
-        "Issues Resolved": "",
-        "Followers": "",
-        "Following": "",
-        "Organizations": "",
-        "Most Used Language": ""
+        "Public Repositories": "20",
+        "Total Commits": "--",
+        "Pull Requests": "--",
+        "Issues Resolved": "--",
+        "Followers": "--",
+        "Following": "--",
+        "Organizations": "--",
+        "Most Used Language": "--"
       },
       description: "Active open-source contributor with diverse project portfolio. Strong collaboration skills with multiple contributions to community projects and personal repositories.",
-      profileLink: "/under-maintenance"
+      profileLink: "https://github.com/Sauvik2308"
     }
   };
 
   const projects = [
     {
-      title: 'LearnTube - LMS',
-      description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      tech: ['React', 'Express', 'Stripe', 'MongoDB'],
-      github: '/under-maintenance',
-      live: '/under-maintenance'
+      title: 'BitShelf',
+      description: 'A one-stop solution for all essential developer utilities such as JSON Formatter, Base64 Encoder/Decoder',
+      tech: ['React', 'Node.js', 'Tailwind', 'Javascript'],
+      github: 'https://github.com/Sauvik2308/BitShelf',
+      live: 'https://bitshelf-flame.vercel.app/'
     },
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: '/under-maintenance',
-      live: '/under-maintenance'
+      title: 'LearnTube',
+      description: 'A full-stack learning management system to manage course content, assignments and real-time progress tracking',
+      tech: ['React', 'Express', 'Stripe', 'MongoDB'],
+      github: 'https://github.com/Sauvik2308/LearnTube',
+      live: 'https://learn-tube-taupe.vercel.app/'
     },
     {
       title: 'Sign Language Detection',
-      description: 'Weather data visualization dashboard with interactive charts, location-based forecasts, and historical data analysis.',
+      description: 'A Computer Vision Model to recognize and interpret hand gestures in real time using a webcam',
       tech: ['Python', 'Tensorflow', 'Keras', 'NumPy'],
-      github: '/under-maintenance',
+      github: 'https://github.com/Sauvik2308/Sign-Language-Detection',
       live: '/under-maintenance'
     }
   ];
@@ -223,7 +243,7 @@ const Portfolio = () => {
       degree: 'Master of Computer Application',
       field: 'Computer Science & Engineering',
       institution: 'Jadavpur University, Kolkata',
-      grade: 'CGPA: Appearing',
+      grade: 'CGPA: 7.9',
       description: 'Specialized in software development, data structures, algorithms, and database management.'
     },
     {
@@ -239,7 +259,7 @@ const Portfolio = () => {
       degree: 'Higher Secondary Education',
       field: 'Science(PCM)',
       institution: 'St Paul\'s Academy, Burdwan',
-      grade: 'Percentage: 94%',
+      grade: 'Percentage: 80%',
       description: 'Strong foundation in mathematics, physics, chemistry and English literature.'
     }
   ];
@@ -362,7 +382,7 @@ const Portfolio = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-teal-600">Hello, I'm Sauvik!</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                  I'm a passionate software engineering student with a strong foundation in full-stack development.
+                  I'm a passionate Computer Science student with a strong foundation in full-stack development.
                   I love solving complex problems and turning ideas into reality through code.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
@@ -474,7 +494,27 @@ const Portfolio = () => {
                   </div>
                   <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.leetcode.textColor} transition-colors`}>LeetCode</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Problem Solving</p>
-                  <div className={`mt-3 px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs wiggle-animation`}>
+                  <div className={`mt-3 px-3 py-1 bg-orange-200 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-xs wiggle-animation`}>
+                    200+ Problems
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* GeeksForGeeks */}
+            <div
+              className="coding-profile-card group cursor-pointer"
+              onClick={() => setSelectedProfile('gfg')}
+            >
+              <div className={`${cardClasses} border rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 transform group-hover:scale-110 w-48 h-48 flex flex-col items-center justify-center relative overflow-hidden hover-shake`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${profileData.gfg.bgColor} group-hover:${profileData.gfg.hoverBgColor} transition-all duration-300`}></div>
+                <div className="relative z-10 text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${profileData.gfg.color} rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg glow-animation`}>
+                    <SiGeeksforgeeks />
+                  </div>
+                  <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.gfg.textColor} transition-colors`}>GeeksForGeeks</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Problem Solving</p>
+                  <div className={`mt-3 px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs star-animation`}>
                     100+ Problems
                   </div>
                 </div>
@@ -494,7 +534,7 @@ const Portfolio = () => {
                   </div>
                   <h3 className={`font-bold text-lg mb-2 group-hover:text-${profileData.hackerrank.textColor} transition-colors`}>HackerRank</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Algorithms & DS</p>
-                  <div className={`mt-3 px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs star-animation`}>
+                  <div className={`mt-3 px-3 py-1 bg-green-200 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs star-animation`}>
                     5⭐ Gold Badge
                   </div>
                 </div>
@@ -522,7 +562,7 @@ const Portfolio = () => {
             </div>
 
             {/* CodeChef */}
-            <div
+            {/* <div
               className="coding-profile-card group cursor-pointer"
               onClick={() => setSelectedProfile('codechef')}
             >
@@ -539,7 +579,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* GitHub */}
             <div
@@ -554,8 +594,8 @@ const Portfolio = () => {
                   </div>
                   <h3 className={`font-bold text-lg mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors`}>GitHub</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Open Source</p>
-                  <div className={`mt-3 px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-xs heartbeat-animation`}>
-                    ---
+                  <div className={`mt-3 px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-200 rounded-full text-xs heartbeat-animation`}>
+                    15+ Repos
                   </div>
                 </div>
               </div>
@@ -648,11 +688,11 @@ const Portfolio = () => {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a href={project.github} className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
+                  <a href={project.github} target='blank' className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
                     <Github className="w-4 h-4" />
                     Code
                   </a>
-                  <a href={project.live} className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
+                  <a href={project.live} target='blank'  className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-teal-600 transition-colors">
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
                   </a>
